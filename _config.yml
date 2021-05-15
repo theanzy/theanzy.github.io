@@ -24,13 +24,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   main page
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-footer_links:
-  - title: Twitter
-    url: https://twitter.com/theanzy
-    icon: fab fa-twitter-square
-  - title: GitHub
-    url: https://github.com/theanzy
-    icon: fab fa-github-square
+twitter_username: theanzy
+github_username: theanzy
 
 # Build settings
 # theme: jekyll-theme-so-simple
