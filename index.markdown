@@ -6,7 +6,7 @@ layout: home
 ---
 
 ## Blog:
-[https://theanzy.github.io/blog]()
+[https://theanzy.github.io/blog](https://theanzy.github.io/blog)
 
 ## Others:
 - [todoapp-demo](https://todoapp-demo-zy.herokuapp.com)
