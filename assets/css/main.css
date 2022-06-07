@@ -1963,8 +1963,8 @@ header > p {
   padding: 0.5rem;
   border-radius: 10px;
   cursor: pointer;
-  transition: all 0.2s ease;
-  pointer-events: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition: visibility 0.2s 0.1s ease;
 }
 
 .image .external-links:hover {
@@ -1974,7 +1974,6 @@ header > p {
   transform: translate(0);
   visibility: visible;
   opacity: 1;
-  pointer-events: fill;
 }
 
 .image .external-links a:hover {
