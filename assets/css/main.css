@@ -1967,20 +1967,22 @@ header > p {
   padding: 0.5rem;
   border-radius: 10px;
   cursor: pointer;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-  transition: visibility 0.2s 0.1s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease, visibility 0.1s ease;
 }
 
-.image .external-links:hover {
+.box.feature:hover .external-links,
+.box.feature:focus .external-links {
   gap: 3.5rem;
 }
-.image .external-links:hover > .link {
+.box.feature:hover .link,
+.box.feature:focus .link {
   transform: translate(0);
   visibility: visible;
   opacity: 1;
 }
 
-.image .external-links a:hover {
+.image .external-links a:hover,
+.image .external-links a:focus {
   color: hsl(var(--minor-accent), 60%, 55%);
   background-color: hsla(var(--minor-accent), 30%, 10%, 0.2);
 }
