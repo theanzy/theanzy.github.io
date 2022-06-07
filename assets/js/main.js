@@ -33,25 +33,30 @@
     alignment: 'center',
   });
 
+  // Nav.
+
+  // Title Bar.
+  const titleBar = $(
+    '<div id="titleBar">' +
+      '<a href="#navPanel" class="toggle"></a>' +
+      '<a href="#banner" class="scrolly">' +
+      '<span class="title">' +
+      $('#logo').html() +
+      '</span>' +
+      '</a>' +
+      '</div>'
+  );
+
+  titleBar.appendTo($body);
+
   // Scrolly
+  // moved here so that we can use scroll on the title bar
   $('.scrolly').scrolly({
     speed: 1000,
     offset: function () {
       return $nav.height() - 50;
     },
   });
-
-  // Nav.
-
-  // Title Bar.
-  $(
-    '<div id="titleBar">' +
-      '<a href="#navPanel" class="toggle"></a>' +
-      '<span class="title">' +
-      $('#logo').html() +
-      '</span>' +
-      '</div>'
-  ).appendTo($body);
 
   // Panel.
   $('<div id="navPanel">' + '<nav>' + $('#nav').navList() + '</nav>' + '</div>')
