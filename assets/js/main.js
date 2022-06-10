@@ -54,7 +54,7 @@
   $('.scrolly').scrolly({
     speed: 1000,
     offset: function () {
-      return $nav.height() - 50;
+      return $nav.height() - 10;
     },
   });
 
@@ -78,7 +78,7 @@
       var target = $(this).offset().top;
       var id = $(this).attr('id');
       var navLinks = $('#nav li:has(.scrolly)');
-      if (position >= target) {
+      if (position >= target - 60) {
         navLinks.removeClass('current');
         const currentNav = $('#nav li:has(a[href="#' + id + '"])');
         currentNav.addClass('current');
