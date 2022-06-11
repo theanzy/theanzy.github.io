@@ -1959,7 +1959,7 @@ header > p {
   transition: all 0.2s ease;
 }
 
-.image .external-links .link {
+.image .external-links .project-link {
   visibility: hidden;
   opacity: 0;
   color: #eaeaea;
@@ -1974,8 +1974,8 @@ header > p {
 .box.feature:focus .external-links {
   gap: 3.5rem;
 }
-.box.feature:hover .link,
-.box.feature:focus .link {
+.box.feature:hover .project-link,
+.box.feature:focus .project-link {
   transform: translate(0);
   visibility: visible;
   opacity: 1;

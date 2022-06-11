@@ -49,17 +49,18 @@
 
   titleBar.appendTo($body);
 
-  // Scrolly
-  // moved here so that we can use scroll on the title bar
-  $('.scrolly').scrolly({
-    speed: 1000,
-    offset: function () {
-      return $nav.height() - 10;
-    },
-  });
+  const listElements = $($.parseHTML($('#nav').navList()));
+  for (let i = 0; i < listElements.length - 1; i++) {
+    let element = listElements[i];
+    element.classList.add('scrolly');
+  }
+  let downLoadElement = listElements[listElements.length - 1];
+  downLoadElement.removeAttribute('download', 'resume.zip');
+  const navList = listElements.map((_, element) => element.outerHTML);
+  const navListHtml = [...navList].join('');
 
   // Panel.
-  $('<div id="navPanel">' + '<nav>' + $('#nav').navList() + '</nav>' + '</div>')
+  $('<div id="navPanel">' + '<nav>' + navListHtml + '</nav>' + '</div>')
     .appendTo($body)
     .panel({
       delay: 500,
@@ -71,6 +72,15 @@
       target: $body,
       visibleClass: 'navPanel-visible',
     });
+
+  // Scrolly
+  // moved here so that we can use scroll on the title bar
+  $('.scrolly').scrolly({
+    speed: 1000,
+    offset: function () {
+      return $nav.height() - 10;
+    },
+  });
 
   $(window).scroll(function () {
     var position = window.pageYOffset;
