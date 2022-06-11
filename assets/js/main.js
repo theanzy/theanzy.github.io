@@ -55,7 +55,7 @@
     element.classList.add('scrolly');
   }
   let downLoadElement = listElements[listElements.length - 1];
-  downLoadElement.removeAttribute('download', 'resume.zip');
+  downLoadElement.setAttribute('download', 'resume.pdf');
   const navList = listElements.map((_, element) => element.outerHTML);
   const navListHtml = [...navList].join('');
 
