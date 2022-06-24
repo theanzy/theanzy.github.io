@@ -129,7 +129,7 @@ body {
 .heading-3 {
   font-size: 1.75rem;
   color: hsl(var(--primary-accent), 75%, 45%);
-  padding-top: 0.75rem;
+  padding-top: 0.3rem;
   padding-bottom: 0.25rem;
 }
 
@@ -2181,7 +2181,7 @@ ul.special {
   padding-left: 0;
   cursor: default;
   position: relative;
-  margin: -2em 0 4em -2em;
+  margin: -2em 0 1.5em -2em;
   color: hsl(var(--primary-accent), 80%, 10%);
 }
 
@@ -2196,21 +2196,28 @@ ul.special li {
   padding: 2em 0 0 2em;
 }
 
+ul.special li img {
+  max-height: 3em;
+  display: inline-block;
+  margin: 0;
+}
+
 ul.special i {
-  font-size: 3em;
+  text-align: center;
+  top: -10px;
+}
+ul.special i.fab {
+  display: block;
+  font-size: 3.5em;
   text-align: center;
   top: -10px;
 }
 
-ul.special li.plain-text {
-  font-size: 1.3em;
-  font-weight: 900;
-  text-align: center;
-  border: none;
-  top: -0.5em;
-}
-
 ul.special li a {
+  display: block;
+  outline: 0;
+}
+ul.special li span {
   display: block;
   outline: 0;
 }
@@ -3200,7 +3207,7 @@ body {
   /* Special */
 
   ul.special {
-    margin: -0.75em 0 2em -0.75em;
+    margin: -0.75em 0 1.5em -0.75em;
   }
 
   ul.special li {
